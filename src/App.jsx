@@ -1,27 +1,14 @@
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-
+import Button from '@mui/material/Button';
+import AcUnitIcon from '@mui/icons-material/AcUnit';
 function App() {
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <div className="card">
-        <h1>
-        Tuấn Linh Dog
-        </h1>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div>ssss</div>
+    <AcUnitIcon color='error'/>
+    <Button variant="text">Text</Button>
+    <Button variant="contained">Contained</Button>
+    <Button variant="outlined">Outlined</Button>
     </>
   )
 }
