@@ -1,8 +1,12 @@
-// Updated by trungquandev.com's author on May 13 2023
-// Sample Eslint config for Node.js project
 module.exports = {
   env: { browser: true, es2020: true, node: true },
-  extends: ['eslint:recommended'],
+  extends: [
+    'eslint:recommended',
+    'plugin:react/recommended',
+    'plugin:react-hooks/recommended',
+    'plugin:import/errors',
+    'plugin:import/warnings'
+  ],
   parser: '@babel/eslint-parser',
   parserOptions: {
     ecmaVersion: 'latest',
@@ -10,7 +14,7 @@ module.exports = {
     allowImportExportEverywhere: true
   },
   settings: { react: { version: '18.2' } },
-  plugins: [],
+  plugins: ['react', 'react-hooks', 'import'],
   rules: {
     'react-refresh/only-export-components': 'warn',
     'react-hooks/rules-of-hooks': 'error',
@@ -20,9 +24,14 @@ module.exports = {
     'no-restricted-imports': [
       'error',
       {
-        patterns: ['@mui/*/*/*']
+        patterns: ['@mui/*/*/*'] // Ngăn import sâu từ Material-UI
       }
     ],
+    'import/no-unresolved': 'error', // Báo lỗi nếu thiếu import
+    'import/named': 'error',
+    'import/default': 'error',
+    'import/namespace': 'error',
+    'import/no-duplicates': 'error', // Phát hiện import trùng lặp
     'no-console': 1,
     'no-lonely-if': 1,
     'no-unused-vars': 1,

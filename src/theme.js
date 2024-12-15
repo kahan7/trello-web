@@ -13,7 +13,7 @@ const theme = extendTheme({
           paper: '#f9f9f9',
         },
         text: {
-          primary: '#000000',
+          primary: '#000000',  // Màu chữ chính trong chế độ sáng
           secondary: '#555555',
         },
       },
@@ -28,7 +28,7 @@ const theme = extendTheme({
           paper: '#1e1e1e',
         },
         text: {
-          primary: '#ffffff',
+          primary: '#ffffff',  // Màu chữ chính trong chế độ tối
           secondary: '#aaaaaa',
         },
       },
@@ -36,6 +36,7 @@ const theme = extendTheme({
   },
   cssVarPrefix: 'mui',
   colorSchemeSelector: '[data-color-scheme]',
+
 });
 
 export default theme;
